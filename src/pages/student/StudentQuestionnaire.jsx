@@ -26,7 +26,7 @@ export default function StudentQuestionnaire() {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "http://localhost:8000/api/questionnaire",
+          "https://skirpsian.com/api/questionnaire",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -128,7 +128,7 @@ export default function StudentQuestionnaire() {
 
       // submit questionnaire
       await axios.post(
-        "http://localhost:8000/api/questionnaire",
+        "https://skirpsian.com/api/questionnaire",
         {
           answers,
         },
@@ -141,7 +141,7 @@ export default function StudentQuestionnaire() {
 
       // calculate recommendation
       await axios.post(
-        "http://localhost:8000/api/recommendation",
+        "https://skirpsian.com/api/recommendation",
         {},
         {
           headers: {

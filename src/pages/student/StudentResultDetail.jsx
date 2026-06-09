@@ -19,8 +19,8 @@ export default function StudentResultDetail() {
         const token = localStorage.getItem("token");
 
         const endpoint = id
-          ? `http://localhost:8000/api/recommendation/history/${id}`
-          : "http://localhost:8000/api/recommendation/detail";
+          ? `https://skirpsian.com/api/recommendation/history/${id}`
+          : "https://skirpsian.com/api/recommendation/detail";
 
         const response = await axios.get(endpoint, {
           headers: {

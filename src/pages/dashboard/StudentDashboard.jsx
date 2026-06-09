@@ -19,7 +19,7 @@ export default function StudentDashboard() {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "http://localhost:8000/api/recommendation/history",
+          "https://skirpsian.com/api/recommendation/history",
           {
             headers: {
               Authorization: `Bearer ${token}`,
