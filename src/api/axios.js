@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://skirpsian.com/api",
+  baseURL: "https://spk-skripsi-be-production-48e1.up.railway.app/api",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",

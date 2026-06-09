@@ -25,7 +25,7 @@ export default function StudentResult() {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "https://skirpsian.com/api/recommendation/latest",
+          "https://spk-skripsi-be-production-48e1.up.railway.app/api/recommendation/latest",
           {
             headers: {
               Authorization: `Bearer ${token}`,

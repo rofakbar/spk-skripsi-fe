@@ -26,7 +26,7 @@ export default function StudentQuestionnaire() {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "https://skirpsian.com/api/questionnaire",
+          "https://spk-skripsi-be-production-48e1.up.railway.app/api/questionnaire",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -128,7 +128,7 @@ export default function StudentQuestionnaire() {
 
       // submit questionnaire
       await axios.post(
-        "https://skirpsian.com/api/questionnaire",
+        "https://spk-skripsi-be-production-48e1.up.railway.app/api/questionnaire",
         {
           answers,
         },
@@ -141,7 +141,7 @@ export default function StudentQuestionnaire() {
 
       // calculate recommendation
       await axios.post(
-        "https://skirpsian.com/api/recommendation",
+        "https://spk-skripsi-be-production-48e1.up.railway.app/api/recommendation",
         {},
         {
           headers: {
