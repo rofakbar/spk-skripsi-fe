@@ -85,11 +85,6 @@ export default function AdminSidebar() {
           })}
         </nav>
       </div>
-
-      <button className="flex items-center gap-3 text-red-500 text-sm">
-        <LogOut size={18} />
-        Logout Account
-      </button>
     </aside>
   );
 }
