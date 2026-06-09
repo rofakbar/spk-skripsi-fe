@@ -4,7 +4,6 @@ import {
   SlidersHorizontal,
   Database,
   History,
-  LogOut,
   Settings2,
 } from "lucide-react";
 
