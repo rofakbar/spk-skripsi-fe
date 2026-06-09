@@ -1,25 +1,78 @@
 import React from 'react';
-// Kita pakai ikon loader dari lucide-react yang sudah terinstal di project lu
-import { Loader2 } from 'lucide-react';
 
 const Splash = () => {
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-blue-600 text-white z-50">
-      {/* Bagian Logo / Judul Skripsi */}
-      <div className="text-center mb-6 animate-pulse">
-        <h1 className="text-4xl font-extrabold tracking-wider">SPK SKRIPSI</h1>
-        <p className="text-sm font-medium opacity-80 mt-2 uppercase tracking-widest">
-          Sistem Pendukung Keputusan
-        </p>
+    <div style={styles.container}>
+      {/* Inject CSS untuk animasi berputar */}
+      <style>
+        {`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}
+      </style>
+
+      {/* Logo Lingkaran */}
+      <div style={styles.logoContainer}>
+        {/* Lu bisa ganti emoji ini pakai <img src="logo.png" /> */}
+        <span style={{ fontSize: '60px' }}>🎓</span> 
       </div>
 
-      {/* Spinner Loading */}
-      <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
-        <Loader2 className="w-5 h-5 animate-spin" />
-        <span className="text-sm font-semibold tracking-wide">Memuat Sistem...</span>
-      </div>
+      {/* Teks Judul */}
+      <h1 style={styles.title}>SPK SKRIPSI</h1>
+      <p style={styles.subtitle}>Metode WASPAS</p>
+
+      {/* Indikator Loading */}
+      <div style={styles.loader}></div>
     </div>
   );
+};
+
+// Styling disamakan dengan warna palet Figma/Flutter lu
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh', // Penuhi layar
+    backgroundColor: '#0D5C4D', // Hijau utama SKRIPSIAN
+    color: 'white',
+    fontFamily: 'sans-serif',
+  },
+  logoContainer: {
+    backgroundColor: 'white',
+    padding: '24px',
+    borderRadius: '50%',
+    boxShadow: '0 8px 15px rgba(0,0,0,0.15)',
+    marginBottom: '32px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100px',
+    height: '100px',
+  },
+  title: {
+    fontSize: '36px',
+    fontWeight: 'bold',
+    letterSpacing: '2px',
+    margin: '0 0 8px 0',
+  },
+  subtitle: {
+    fontSize: '18px',
+    opacity: 0.8,
+    letterSpacing: '1.5px',
+    margin: '0 0 48px 0',
+  },
+  loader: {
+    border: '4px solid rgba(255, 255, 255, 0.3)',
+    borderTop: '4px solid white',
+    borderRadius: '50%',
+    width: '40px',
+    height: '40px',
+    animation: 'spin 1s linear infinite',
+  }
 };
 
 export default Splash;
