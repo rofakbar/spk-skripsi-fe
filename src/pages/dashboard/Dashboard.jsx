@@ -1,6 +1,6 @@
 import AdminDashboard from "./AdminDashboard";
 import StudentDashboard from "./StudentDashboard";
-import useSessionTimeout from '../hooks/useSessionTimeout';
+import useSessionTimeout from '../../hooks/useSessionTimeout';
 
 export default function Dashboard() {
   const user = JSON.parse(localStorage.getItem("user"));
